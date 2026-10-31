@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Strengthify</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="icons/icon48.png" alt=""></div>
+    <div class="ht">
+      <div class="name">Strengthify</div>
+    </div>
+  </header>
+
+  <section class="tester">
+    <label for="pw">Test a password</label>
+    <div class="field">
+      <input id="pw" type="password" placeholder="Type or paste a password" autocomplete="off" spellcheck="false">
+      <button id="toggle" type="button" aria-label="Show or hide password">
+        <svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <section id="empty" class="empty">Type a password above, or just start typing in any password box on a website. A strength card will appear automatically.</section>
+
+  <section id="result" class="hidden">
+    <div class="rowtop"><span id="pill" class="pill"></span></div>
+    <div class="meter" id="meter"><i></i><i></i><i></i></div>
+  </section>
+
+  <div id="notice" class="notice hidden"></div>
+
+  <details class="privacy">
+    <summary>Privacy and trust</summary>
+    <ul>
+      <li>Works offline: turn off Wi-Fi and it still works.</li>
+      <li>Passwords are never stored, logged or sent anywhere.</li>
+      <li>Only reads password boxes, nothing else on the page.</li>
+      <li>Asks for no browser permissions beyond running on pages.</li>
+    </ul>
+  </details>
+
+  <footer>
+    <svg viewBox="0 0 24 24"><path d="M12 2.5 4.5 5.6v5.7c0 4.6 3.1 8.8 7.5 10.2 4.4-1.4 7.5-5.6 7.5-10.2V5.6L12 2.5z" fill="currentColor"/></svg>
+    <span>Runs on your device. Nothing stored or sent.</span><span id="ver" class="ver"></span>
+  </footer>
+
+  <script src="lib/features.js"></script>
+  <script src="lib/forest.js"></script>
+  <script src="lib/svm.js"></script>
+  <script src="lib/scorer.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
